@@ -1,0 +1,75 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:text=""
+        android:id="@+id/timer"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/hourUpButton"
+        android:layout_above="@+id/timer"
+        android:layout_toLeftOf="@+id/minuteUpButton"
+        android:layout_toStartOf="@+id/minuteUpButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/hourDownButton"
+        android:layout_below="@+id/timer"
+        android:layout_toLeftOf="@+id/minuteDownButton"
+        android:layout_toStartOf="@+id/minuteDownButton" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/minuteUpButton"
+        android:layout_above="@+id/timer"
+        android:layout_centerHorizontal="true" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minuteDownButton"
+        android:layout_alignTop="@+id/hourDownButton"
+        android:layout_centerHorizontal="true" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/secondUpButton"
+        android:layout_alignTop="@+id/minuteUpButton"
+        android:layout_toRightOf="@+id/minuteUpButton"
+        android:layout_toEndOf="@+id/minuteUpButton" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/secondDownButton"
+        android:layout_below="@+id/timer"
+        android:layout_toRightOf="@+id/minuteDownButton"
+        android:layout_toEndOf="@+id/minuteDownButton" />
+
+</RelativeLayout>
