@@ -25,14 +25,13 @@ public class CreateTimersActivity extends ActionBarActivity {
         Button hourDownButton = (Button) findViewById(R.id.hourDownButton);
 
         timer.setText("00:00:00");
-        /*int values return is ASC|| values of the integers in char form so to
-         get exact values I subtract 48 because the char 0 is 48 as an int*/
-        timerIntAtOnes = timer.getText().charAt(1) - 48;
-        timerIntAtTens = timer.getText().charAt(0) - 48;
+
+        timerIntAtOnes = Character.getNumericValue(timer.getText().charAt(1));
+        timerIntAtTens = Character.getNumericValue(timer.getText().charAt(0));
         hourUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (timerIntAtOnes < 9 ) {
+                /*if (timerIntAtOnes < 9 ) {
                     timerIntAtOnes++;
                 }
                 else{
@@ -42,7 +41,9 @@ public class CreateTimersActivity extends ActionBarActivity {
                 if(timerIntAtTens > 0 && timerIntAtOnes > 2 ){
                     timerIntAtOnes = 0;
                     timerIntAtTens = 0;
-                }
+                }*/
+
+
                 timer.setText(String.valueOf(timerIntAtTens) + String.valueOf(timerIntAtOnes) + ":00:00");
                 //Toast.makeText(getBaseContext(), String.valueOf(timerIntAtTens) + "," + String.valueOf(timerIntAtOnes), Toast.LENGTH_SHORT).show();
             }
